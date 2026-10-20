@@ -1,0 +1,54 @@
+{
+  "python": "3.11.9",
+  "numpy": "2.4.6",
+  "pandas": "3.0.3",
+  "sklearn": "1.9.0",
+  "scipy": "1.17.1",
+  "xgboost": "3.2.0",
+  "lightgbm": "4.6.0",
+  "imblearn": "0.14.2",
+  "shap": "0.51.0",
+  "seed": 42,
+  "args": {
+    "dataset": "euro",
+    "data": [
+      "D:\\Educational\\Research\\Tests\\European Credit Card Fraud Dataset 284,807 transaction records\\creditcard.csv"
+    ],
+    "split": "random",
+    "time_col": null,
+    "out": "D:\\Educational\\Research\\Tests\\results_v2",
+    "n_iter_rf": 10,
+    "n_iter_xgb": 15,
+    "n_iter_lgb": 10,
+    "boot": 500,
+    "lat_n": 300,
+    "skip_cv": false,
+    "skip_shap": false
+  },
+  "best_params": {
+    "Random Forest": {
+      "n_estimators": 300,
+      "min_samples_split": 2,
+      "max_features": "sqrt",
+      "max_depth": null
+    },
+    "XGBoost": {
+      "subsample": 0.8,
+      "n_estimators": 500,
+      "min_child_weight": 3,
+      "max_depth": 6,
+      "learning_rate": 0.1,
+      "gamma": 0,
+      "colsample_bytree": 0.9
+    },
+    "LightGBM": {
+      "subsample": 0.8,
+      "reg_lambda": 1.0,
+      "num_leaves": 31,
+      "n_estimators": 500,
+      "learning_rate": 0.1,
+      "colsample_bytree": 0.9
+    }
+  },
+  "tensorflow": "2.21.0"
+}
